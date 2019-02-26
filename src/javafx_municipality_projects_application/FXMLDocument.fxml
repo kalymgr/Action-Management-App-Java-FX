@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_municipality_projects_application.FXMLDocumentController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <top>
+      <FlowPane prefHeight="57.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblActionId" text="Αρ. Δράσης">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <Bloom />
+               </effect>
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Label>
+            <TextField fx:id="txtActionId" editable="false" prefHeight="25.0" prefWidth="67.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <FlowPane.margin>
+                  <Insets right="20.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblActionName" text="Όνομα Δράσης">
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtActionName" prefHeight="25.0" prefWidth="447.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </FlowPane>
+   </top>
+   <center>
+      <TableView fx:id="tblTasks" editable="true" prefHeight="476.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnTitle" prefWidth="75.0" text="Τιτλος" />
+          <TableColumn fx:id="columnDateFrom" prefWidth="75.0" text="Ημνια Έναρξης" />
+            <TableColumn fx:id="columnDateTo" prefWidth="75.0" text="Ημνια Ληξης" />
+            <TableColumn fx:id="columnPriority" prefWidth="75.0" text="Προτεραιοτητα" />
+            <TableColumn fx:id="columnCompleted" prefWidth="75.0" text="Ολοκληρώθηκε" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <FlowPane prefHeight="76.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNewAction" mnemonicParsing="false" onAction="#btnNewActionPressed" text="Νέα δράση" />
+            <Button fx:id="btnNewTask" mnemonicParsing="false" onAction="#btnNewTaskButtonPressed" text="Νέα εργασία" />
+            <Button fx:id="btnDeleteTask" mnemonicParsing="false" onAction="#btnDeleteTaskPressed" text="Διαγραφή Εργασίας" />
+            <Button fx:id="btnSaveRecord" mnemonicParsing="false" onAction="#btnSaveRecordPressed" text="Αποθήκευση Δράσης" />
+            <Button fx:id="btnDeleteAction" mnemonicParsing="false" onAction="#btnDeleteActionPressed" text="Διαγραφή δράσης" />
+            <Label fx:id="lblRecordStatus" text="Status:" />
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>
